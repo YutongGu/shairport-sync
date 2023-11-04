@@ -1393,6 +1393,7 @@ static abuf_t *buffer_get_frame(rtsp_conn_info *conn) {
             conn->initial_reference_time = 0;
             conn->initial_reference_timestamp = 0;
             conn->first_packet_timestamp = 0; // make sure the first packet isn't late
+            conn->ab_buffering = 1; // start buffering once more
           }
           do_wait = 1;
         }
